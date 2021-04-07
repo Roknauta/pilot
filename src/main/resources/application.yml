@@ -1,0 +1,22 @@
+server:
+  port: 5000
+
+spring:
+  thymeleaf:
+    enabled: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/pilot
+    username: pilot
+    password: pilot
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  jooq:
+    sql-dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+joinfaces:
+  jsf:
+    PROJECT_STAGE: Development
+  primefaces:
+    theme: south-street
