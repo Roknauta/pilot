@@ -5,18 +5,26 @@ spring:
   thymeleaf:
     enabled: false
   datasource:
-    url: jdbc:mysql://localhost:3306/pilot
-    username: pilot
-    password: pilot
+    url: jdbc:hsqldb:hsql://localhost/pilot
+    username: sa
+    password:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
   jooq:
-    sql-dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    sql-dialect: org.hibernate.dialect.HSQLDialect
+
 
 joinfaces:
   jsf:
     PROJECT_STAGE: Development
   primefaces:
     theme: south-street
+
+  adminfaces:
+    control-sidebar:
+      left-menu-template: true
+    enable-slide-menu: true
+    render-control-sidebar: true
