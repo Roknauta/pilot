@@ -5,15 +5,16 @@ spring:
   thymeleaf:
     enabled: false
   datasource:
-    url: jdbc:mysql://localhost:3306/pilot
-    username: pilot
-    password: pilot
+    url: jdbc:hsqldb:hsql://localhost/pilot
+    username: sa
+    password:
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+    database: hsql
   jooq:
-    sql-dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    sql-dialect: org.hibernate.dialect.HSQLDialect
 
 joinfaces:
   jsf:
