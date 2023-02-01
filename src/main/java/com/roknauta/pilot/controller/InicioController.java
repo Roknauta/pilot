@@ -1,12 +1,12 @@
 package com.roknauta.pilot.controller;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.faces.context.FacesContext;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
-import javax.annotation.PostConstruct;
-import javax.faces.context.FacesContext;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;

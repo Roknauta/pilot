@@ -1,7 +1,8 @@
 package com.roknauta.pilot.util;
 
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
+import jakarta.faces.application.FacesMessage;
+import jakarta.faces.context.FacesContext;
+
 import java.util.ResourceBundle;
 
 public class JsfUtils {

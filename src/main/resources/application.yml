@@ -10,14 +10,14 @@ spring:
     password:
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: true
     database: hsql
   jooq:
     sql-dialect: org.hibernate.dialect.HSQLDialect
 
 joinfaces:
-  jsf:
-    PROJECT_STAGE: Development
   primefaces:
     theme: south-street
+  faces:
+    project-stage: Development
