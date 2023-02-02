@@ -10,7 +10,8 @@ import org.springframework.web.context.annotation.RequestScope;
 
 import java.io.Serializable;
 
-@Component @RequestScope public class PessoaController implements Serializable {
+@Component
+@RequestScope public class PessoaController implements Serializable {
 
     @Setter @Getter private String nome;
 
