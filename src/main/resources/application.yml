@@ -5,9 +5,9 @@ spring:
   thymeleaf:
     enabled: false
   datasource:
-    url: jdbc:hsqldb:hsql://localhost/pilot
+    url: jdbc:hsqldb:hsql://localhost:5020/pilot
     username: sa
-    password:
+    password: sa
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -18,6 +18,6 @@ spring:
 
 joinfaces:
   primefaces:
-    theme: south-street
+    theme: saga
   faces:
     project-stage: Development
