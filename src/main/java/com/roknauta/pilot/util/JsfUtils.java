@@ -14,7 +14,7 @@ public class JsfUtils {
     }
 
     static public void addMessage(final String clientId, final FacesMessage.Severity severity, final String message) {
-        getFacesContext().addMessage(clientId, new FacesMessage(severity, message, null));
+        getFacesContext().addMessage(clientId, new FacesMessage(severity, null, message));
     }
 
     static public void addMessage(final FacesMessage.Severity severity, final String message) {

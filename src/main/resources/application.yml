@@ -5,19 +5,22 @@ spring:
   thymeleaf:
     enabled: false
   datasource:
-    url: jdbc:hsqldb:hsql://localhost:9010/pilot
+    url: jdbc:hsqldb:hsql://localhost/pilot
     username: sa
-    password: sa
+    password:
+    hikari:
+      driver-class-name: org.hsqldb.jdbc.JDBCDriver
+      transaction-isolation: 1
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
     show-sql: true
     database: hsql
-  jooq:
-    sql-dialect: org.hibernate.dialect.HSQLDialect
 
 joinfaces:
   primefaces:
     theme: saga
   faces:
     project-stage: Development
+  myfaces:
+    resource-bundle-control: jsf

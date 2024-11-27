@@ -2,6 +2,7 @@ package com.roknauta.pilot.controller;
 
 import com.roknauta.pilot.service.PessoaService;
 import com.roknauta.pilot.util.JsfUtils;
+import jakarta.faces.view.ViewScoped;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,8 @@ import org.springframework.web.context.annotation.RequestScope;
 import java.io.Serializable;
 
 @Component
-@RequestScope public class PessoaController implements Serializable {
+@ViewScoped
+public class PessoaController implements Serializable {
 
     @Setter @Getter private String nome;
 

@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui" xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
-<ui:composition template="layout/template.xhtml">
-    <ui:define name="content">
-        <h:form>
-            <p:messages id="messages" showDetail="true" closable="true">
-                <p:autoUpdate />
-            </p:messages>
-            <h:panelGrid columns="1">
-                <p:outputLabel value="#{msg['name']}" for="nome"/>
-                <p:inputText id="nome" value="#{pessoaController.nome}"/>
-                <p:commandButton value="#{msg['save']}" action="#{pessoaController.salvar}"/>
-            </h:panelGrid>
-        </h:form>
-    </ui:define>
-</ui:composition>
+<h:head>
+    <title>#{msg['title']}</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:messages id="messages" showDetail="true" closable="true">
+            <p:autoUpdate/>
+        </p:messages>
+        <p:tabView dynamic="true">
+            <p:tab title="Cadastro">
+                <p:panel header="Painel">
+                    <h:panelGrid columns="1">
+                        <p:outputLabel value="#{msg['name']}" for="@next"/>
+                        <p:inputText id="nome" value="#{pessoaController.nome}"/>
+                    </h:panelGrid>
+                    <p:commandButton value="#{msg['save']}" action="#{pessoaController.salvar()}"/>
+                </p:panel>
+            </p:tab>
+            <p:tab title="Dat">
+                <!--<p:panel header="Painel">
+                    <h:panelGrid columns="1">
+                        <p:outputLabel value="#{msg['name']}" for="@next"/>
+                        <p:inputText id="nome" value="#{pessoaController.nome}"/>
+                    </h:panelGrid>
+                    <p:commandButton value="#{msg['save']}" action="#{pessoaController.salvar()}"/>
+                </p:panel>-->
+            </p:tab>
+        </p:tabView>
+    </h:form>
+</h:body>
 </html>
